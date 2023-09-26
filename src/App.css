@@ -7,8 +7,10 @@
 .container {
     display: grid;
 
-    max-width: 630px;
-    padding: 0 2em;
+    border-radius: .5em;
+    overflow: hidden;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .card {
@@ -16,7 +18,7 @@
     line-height: 1.5;
 
     display: grid;
-    gap: 1.25em;
+    gap: 1em;
 }
 
 .card_one {
@@ -37,10 +39,16 @@
 .card_two {
     color: var(--clr-gray);
     background-color: var(--clr-cyan);
+
+    gap: .5em;
 }
 
 h3 {
     color: white;
+}
+
+.price {
+    color: hsla(204, 43%, 93%, .5);
 }
 
 .card_two span {
@@ -55,16 +63,39 @@ h3 {
     padding: 1em;
     border: none;
     font-weight: var(--fw-bold);
+
+    margin-top: 1.25em;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn:hover {
+    opacity: .8;
+    cursor: pointer;
 }
 
 .card_three {
     background-color: var(--clr-cyan-light);
     color: var(--clr-gray);
+
+    padding-right: 5em;;
+}
+
+@media (max-width:800px) {
+    .container {
+        width: 90%;
+        max-width: 450px;
+        margin-inline: auto
+    }
 }
 
 @media (min-width:800px) {
     .card-wrap {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .container {
+        max-width: 630px;
     }
 }

@@ -13,7 +13,7 @@ function App() {
         <div className='card-wrap'>
         <div className='card card_two'>
           <h3>Monthly Subscription</h3>
-          <p> <span>$29</span> per month</p>
+          <p className='price'><span>$29</span> per month</p>
           <p>Full access for less than $1 a day</p>
           <button className='btn'>Sign Up</button>
         </div>
